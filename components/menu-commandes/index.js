@@ -4,10 +4,7 @@ import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
 import { style } from './style';
 
-const MenuCommande = ({
-  isVisible,
-  disparitionFenetre
-}) => (
+const MenuCommande = ({isVisible, disparitionFenetre}) => (
 
     <Modal
       isVisible={isVisible}
@@ -17,6 +14,7 @@ const MenuCommande = ({
       animationOutTiming={1000}
       backdropTransiitonInTiming={1000}
       backdropTransiitonOutTiming={1000}
+      onBackdropPress={() =>  disparitionFenetre()}
     >
 
         <View style={style.modal}>
@@ -39,6 +37,7 @@ const MenuCommande = ({
         </View>
 
     </Modal>
+
 
 );
 
