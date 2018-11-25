@@ -5,7 +5,7 @@ import Entete from './components/entete';
 export default class App extends React.Component {
   render() {
     return (
-        <Text><Entete /></Text>
+        <Entete titre="Mes commandes" />
     );
   }
 }

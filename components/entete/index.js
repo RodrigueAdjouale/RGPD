@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-const Entete = ()=> (
-  <Text> Mes Contacts</Text>;
+const Entete = ({titre})=> (
+  <Text>{titre}</Text>
 )
 
   export default Entete;
