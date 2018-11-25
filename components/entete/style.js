@@ -14,7 +14,7 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     shadowColor: APP_COULEURS.shadow,
     shadowOpacity: 0.2,
-    shadowOffset: { height: 10 }
+    shadowOffset: { height: 20 }
   },
   texte: {
     color: APP_COULEURS.primaryText,
