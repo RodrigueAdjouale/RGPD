@@ -1,8 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text,View} from 'react-native';
+import {style} from './style';
 
 const Entete = ({titre})=> (
-  <Text>{titre}</Text>
-)
-
+  <View>
+    <View style={style.haut} />
+    <View style={style.entete}>
+      <Text style={style.texte}>{titre}</Text>
+    </View>
+  </View>
+);
   export default Entete;
