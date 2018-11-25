@@ -5,7 +5,7 @@ import {style} from './style';
 
 
 const ListeTaches = ({listeTaches}) => (
-  <List>
+  <List containerStyle={style.list}>
     {listeTaches.map(commande =>(
       <ListItem
         title={commande.content}
