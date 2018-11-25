@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import Entete from './components/entete';
 import ListeTaches from './components/listetaches';
 import BoutonMenu from './components/menu';
+import MenuCommande from './components/menu-commandes';
 
 const commandes =[
 {
@@ -63,6 +64,7 @@ export default class App extends React.Component {
       />
 
       </ScrollView>
+        <MenuCommande />
         <BoutonMenu />
       </View>
 
