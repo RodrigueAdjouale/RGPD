@@ -46,25 +46,31 @@ export default class App extends React.Component {
 
   constructor(props){
       super(props);
-          this.state ={ListeTaches:commandes};
+          this.state ={
+            ListeTaches:commandes,
+            isMenuCommandeVisible:false
+          };
           }
 
     ouvrirMenu =(nomCommande)=>{
       console.log("Appui onPress :",nomCommande);
     }
+    modificationVisibiliteMenuCommandes=()=>{
+      this.setState({isMenuCommandeVisible:!this.state.isMenuCommandeVisible});
 
+    }
   render() {
     return (
       <View style={{flex:1}}>
       <ScrollView>
         <Entete titre="Mes commandes" />
       <ListeTaches
-        appelParent={this.ouvrirMenu}
+        pressCommande={this.modificationVisibiliteMenuCommandes}
         listeTaches={this.state.ListeTaches}
       />
 
       </ScrollView>
-        <MenuCommande />
+        <MenuCommande isVisible={this.state.isMenuCommandeVisible} disparitionFenetre ={this.modificationVisibiliteMenuCommandes}/>
         <BoutonMenu />
       </View>
 

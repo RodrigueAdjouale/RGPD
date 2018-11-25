@@ -4,12 +4,12 @@ import {List, ListItem,Badge } from 'react-native-elements';
 import {style} from './style';
 
 
-const ListeTaches = ({listeTaches,appelParent}) => (
+const ListeTaches = ({listeTaches,pressCommande}) => (
   <List containerStyle={style.list}>
     {listeTaches.map(commande =>(
       <ListItem
         title={commande.content}
-        onPress={() => appelParent(commande.content)}
+        onPress={() => pressCommande(commande.content)}
 
         key={commande.id}
         subtitle={
