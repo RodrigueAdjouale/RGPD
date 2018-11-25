@@ -6,7 +6,7 @@ export const style = StyleSheet.create({
   },
   bleu:{
     paddingLeft: 10,
-    color: 'blue'
+    color: 'purple'
   },
   rouge:{
     paddingLeft: 10,
