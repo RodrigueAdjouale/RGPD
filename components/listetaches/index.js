@@ -5,22 +5,14 @@ import {style} from './style';
 
 const ListeTaches = ({listeTaches}) => (
   <List>
-<ListItem
-title={listeTaches[0].content}
-/>
-<ListItem
-title={listeTaches[1].content}
-/>
-<ListItem
-title={listeTaches[2].content}
-/>
-<ListItem
-title={listeTaches[3].content}
-/>
-
-
-</List>
-
+    {listeTaches.map(commande =>
+      <ListItem
+        title={commande.content}
+        key={commande.id}
+      />
+                    )
+    }
+  </List>
 );
 
 export default ListeTaches;
