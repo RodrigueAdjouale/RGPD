@@ -4,11 +4,13 @@ import {List, ListItem,Badge } from 'react-native-elements';
 import {style} from './style';
 
 
-const ListeTaches = ({listeTaches}) => (
+const ListeTaches = ({listeTaches,appelParent}) => (
   <List containerStyle={style.list}>
     {listeTaches.map(commande =>(
       <ListItem
         title={commande.content}
+        onPress={() => appelParent(commande.content)}
+
         key={commande.id}
         subtitle={
                   <View>
@@ -28,10 +30,8 @@ const ListeTaches = ({listeTaches}) => (
                 commande.status==="Recupérée"?
                 {backgroundColor:"#2ecc71"}:
                 {backgroundColor:"#bdc3c7"}
-
-            }
-
-          />
+                          }
+                />
         }}
 
 

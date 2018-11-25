@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text,View} from 'react-native';
+import {Text,View,ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
 import Entete from './components/entete';
 import ListeTaches from './components/listetaches';
+import BoutonMenu from './components/menu';
 
 const commandes =[
 {
@@ -29,6 +30,7 @@ const commandes =[
   date: '18/11/2018',
   status: 'Installation'
 },
+
 {
   id: 4,
   content: 'Commande 26  itep Naridel',
@@ -46,12 +48,24 @@ export default class App extends React.Component {
           this.state ={ListeTaches:commandes};
           }
 
+    ouvrirMenu =(nomCommande)=>{
+      console.log("Appui onPress :",nomCommande);
+    }
+
   render() {
     return (
-      <View>
+      <View style={{flex:1}}>
+      <ScrollView>
         <Entete titre="Mes commandes" />
-      <ListeTaches listeTaches={this.state.ListeTaches}/>
+      <ListeTaches
+        appelParent={this.ouvrirMenu}
+        listeTaches={this.state.ListeTaches}
+      />
+
+      </ScrollView>
+        <BoutonMenu />
       </View>
+
     );
   }
 }
