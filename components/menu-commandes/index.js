@@ -5,7 +5,8 @@ import Modal from 'react-native-modal';
 import { style } from './style';
 
 const MenuCommande = ({
-  isVisible
+  isVisible,
+  disparitionFenetre
 }) => (
 
     <Modal
@@ -27,12 +28,12 @@ const MenuCommande = ({
             <Button
               buttonStyle={style.buttonDelete}
               title="Supprimer"
-              onPress={() => console.log("supprimer")}
+              onPress={() => disparitionFenetre()}
             />
             <Button
               buttonStyle={style.buttonChangeStatus}
               title="Modifier statut"
-              onPress={() => console.log("statut")}
+              onPress={() =>  disparitionFenetre()}
             />
           </View>
         </View>
