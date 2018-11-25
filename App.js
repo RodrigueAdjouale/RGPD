@@ -9,31 +9,31 @@ const commandes =[
   id: 0,
   content: 'Commande 22  itep Saint François',
   date: '22/11/2018',
-  status: 'Commande effectuée'
+  status: 'Demande'
 },
 {
   id: 1,
   content: 'Commande 23  itep Saint François',
   date: '22/11/2018',
-  status: 'Commande effectuée'
+  status: 'Effectuée'
 },
 {
   id: 2,
   content: 'Commande 24  itep Saint François',
   date: '01/11/2018',
-  status: 'Commande effectuée'
+  status: 'Effectuée'
 },
 {
   id: 3,
   content: 'Commande 25  ime Orangeraie',
   date: '18/11/2018',
-  status: 'Commande Livrée siège'
+  status: 'Installation'
 },
 {
   id: 4,
   content: 'Commande 26  itep Naridel',
   date: '10/11/2018',
-  status: 'Commande livrée sur site'
+  status: 'Recupérée'
 }
 ]
 
