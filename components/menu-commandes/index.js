@@ -4,10 +4,12 @@ import { Button } from 'react-native-elements';
 import Modal from 'react-native-modal';
 import { style } from './style';
 
-const MenuCommande = () => (
+const MenuCommande = ({
+  isVisible
+}) => (
 
     <Modal
-      isVisible={true}
+      isVisible={isVisible}
       animationIn={'zoomInDown'}
       animationOut={'zoomOutUp'}
       animationInTiming={1000}
